@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 
-from apps.inmuebles.views import index
+from apps.inmuebles.views import inmuebles
 
 urlpatterns = [
-    url(r'^$', index),
+    url(r'^$', inmuebles),
 ]
