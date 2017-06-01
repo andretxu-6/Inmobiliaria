@@ -14,4 +14,11 @@ class Inmueble(models.Model):
 	disponibilidad = models.BooleanField()
 	ciudad = models.ForeignKey(Ciudad, null=True, blank=True, on_delete=models.CASCADE)
 	propietario = models.ForeignKey(Propietario, null=True, blank=True, on_delete=models.CASCADE)
-	alquiler = models.ManyToManyField(Cliente)
+	alqui = models.ManyToManyField(Cliente, through='alquiler', blank=True)
+	comprar = models.ManyToManyField(Cliente, blank=True, related_name='comprar')
+
+class alquiler(models.Model):
+	inmueble = models.ForeignKey(Inmueble, on_delete=models.CASCADE)
+	cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+	fecha_entrada = models.DateField()
+	fecha_salida = models.DateField()
