@@ -19,6 +19,7 @@
 				<td>Disponibilidad</td>
 				<td>Ciudad</td>
 				<td>Propietario</td>
+				<td>Editar</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -35,6 +36,7 @@
 						<td>{{ inmueble.disponibilidad }}</td>
 						<td>{{ inmueble.ciudad.nombre }}</td>
 						<td>{{ inmueble.propietario.nombre }}</td>
+						<td><a href="/inmuebles/editar/{{ inmueble.id }}">Editar</a></td>
 					</tr>
 					{% endif %}
 				{% endfor %}
