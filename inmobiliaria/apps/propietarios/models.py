@@ -8,3 +8,6 @@ class Propietario(models.Model):
 	direccion = models.CharField(max_length=150)
 	telefono = models.CharField(max_length=15)
 	email = models.EmailField()
+
+	def __str__(self):
+		return '{}'.format(self.nombre)

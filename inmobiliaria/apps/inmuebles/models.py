@@ -17,6 +17,9 @@ class Inmueble(models.Model):
 	alqui = models.ManyToManyField(Cliente, through='alquiler', blank=True)
 	comprar = models.ManyToManyField(Cliente, blank=True, related_name='comprar')
 
+	def __str__(self):
+		return '{}'.format(self.direccion)
+
 class alquiler(models.Model):
 	inmueble = models.ForeignKey(Inmueble, on_delete=models.CASCADE)
 	cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
