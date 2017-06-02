@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def propietarios(request):
-	return HttpResponse("holadola caracola propietarios")
+	#return HttpResponse("holadola caracola propietarios")
+	return render(request, 'propietarios/index.html')

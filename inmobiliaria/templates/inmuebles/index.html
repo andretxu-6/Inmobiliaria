@@ -4,14 +4,43 @@
 	Inmuebles
 {% endblock %}
 
-{% block importfiles %}
-
-{% endblock %}
-
 {% block content %}
 	<h3>Este es el content del index de la pagina inmuebles</h3>
-{% endblock %}
 
-{% block footer %}
-	<h3>Este es el footer del index de la pagina inmuebles</h3>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Direccion</td>
+				<td>Metros cuadrados</td>
+				<td>Precio</td>
+				<td>Habitaciones</td>
+				<td>Descripcion</td>
+				<td>Alquiler o venta</td>
+				<td>Disponibilidad</td>
+				<td>Ciudad</td>
+				<td>Propietario</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% if inmuebles %}
+				{% for inmueble in inmuebles%}
+					{% if inmueble.disponibilidad == True %}
+					<tr>
+						<td>{{ inmueble.direccion }}</td>
+						<td>{{ inmueble.metros }}</td>
+						<td>{{ inmueble.precio }}</td>
+						<td>{{ inmueble.habitaciones }}</td>
+						<td>{{ inmueble.descripccion }}</td>
+						<td>{{ inmueble.opcion }}</td>
+						<td>{{ inmueble.disponibilidad }}</td>
+						<td>{{ inmueble.ciudad.nombre }}</td>
+						<td>{{ inmueble.propietario.nombre }}</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+			{% else %}
+			<h1>No hay registros</h1>
+			{% endif %}
+		</tbody>
+	</table>
 {% endblock %}
