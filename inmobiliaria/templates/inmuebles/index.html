@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-	<h3>Este es el content del index de la pagina inmuebles</h3>
+	<h3>Lista de los inmuebles disponibles</h3>
 
 	<table class="table table-bordered">
 		<thead>
@@ -23,8 +23,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% if inmuebles %}
-				{% for inmueble in inmuebles%}
+			{% if object_list %}
+				{% for inmueble in object_list %}
 					{% if inmueble.disponibilidad == True %}
 					<tr>
 						<td>{{ inmueble.direccion }}</td>
@@ -36,12 +36,13 @@
 						<td>{{ inmueble.disponibilidad }}</td>
 						<td>{{ inmueble.ciudad.nombre }}</td>
 						<td>{{ inmueble.propietario.nombre }}</td>
-						<td><a href="/inmuebles/editar/{{ inmueble.id }}">Editar</a></td>
+						<td style='text-align:center;'><a class="btn btn-primary" href="/inmuebles/editar/{{ inmueble.id }}">Editar</a>
+						<a style='margin-top:5px;' class="btn btn-danger" href="/inmuebles/delete/{{ inmueble.id }}">Eliminar</a></td>
 					</tr>
 					{% endif %}
 				{% endfor %}
 			{% else %}
-			<h1>No hay registros</h1>
+			<h1>En este momento no hay ningun apartamento disponible</h1>
 			{% endif %}
 		</tbody>
 	</table>
