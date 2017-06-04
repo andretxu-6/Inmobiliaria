@@ -3,7 +3,7 @@
 {% block content %}
 <form method="post">
 	{% csrf_token %}
-	<h3>¿Desea eliminar este registro?</h3>
+	<h3>¿Desea eliminar el propietario {{ propietario.nombre }}?</h3>
 	<button class="btn btn-danger" type="submit">Sí, eliminar</button>
 	<a class="btn btn-default" href="{% url 'inmuebles' %}">Cancelar</a>
 </form>

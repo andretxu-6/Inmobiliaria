@@ -36,8 +36,7 @@
 						<td>{{ inmueble.disponibilidad }}</td>
 						<td>{{ inmueble.ciudad.nombre }}</td>
 						<td>{{ inmueble.propietario.nombre }}</td>
-						<td style='text-align:center;'><a class="btn btn-primary" href="/inmuebles/editar/{{ inmueble.id }}">Editar</a>
-						<a style='margin-top:5px;' class="btn btn-danger" href="/inmuebles/delete/{{ inmueble.id }}">Eliminar</a></td>
+						<td style='text-align:center;'><a class="btn btn-primary" href="/inmuebles/editar/{{ inmueble.id }}">Editar</a><a class="btn btn-danger" href="/inmuebles/delete/{{ inmueble.id }}">Eliminar</a></td>
 					</tr>
 					{% endif %}
 				{% endfor %}
