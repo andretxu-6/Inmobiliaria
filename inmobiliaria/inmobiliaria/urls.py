@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^inmuebles/', include('apps.inmuebles.urls')),
     url(r'^propietarios/', include('apps.propietarios.urls')),
+    url(r'^usuarios/', include('apps.propietarios.urls'))
 ]
