@@ -1,0 +1,7 @@
+Python v2.7.10
+Django v1.11.1
+
+Recursos de css y js:
+  Bootstrap con css de Bootswatch
+  http://getbootstrap.com/
+  https://bootswatch.com/flatly/
