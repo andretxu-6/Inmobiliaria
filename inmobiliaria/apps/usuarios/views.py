@@ -12,4 +12,4 @@ class RegistroUsuario(CreateView):
 	model = User
 	template_name = "usuarios/registro.html"
 	form_class = RegistroForm
-	success_url = reverse_lazy("inmuebles");
+	success_url = reverse_lazy('inmuebles');

@@ -112,4 +112,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #redirecccionar despues de logear
-LOGIN_REDIRECT_URL = reverse_lazy('inmueble:inmuebles')
+LOGIN_REDIRECT_URL = reverse_lazy('inmuebles')

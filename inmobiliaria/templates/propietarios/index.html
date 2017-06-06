@@ -4,6 +4,10 @@
 	Propietarios
 {% endblock %}
 
+{% block importfiles %}
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+{% endblock %}
+
 {% block content %}
 	<h3>Lista de los propietarios disponibles</h3>
 
@@ -29,7 +33,7 @@
 						<td>{{ propietario.direccion }}</td>
 						<td>{{ propietario.telefono }}</td>
 						<td>{{ propietario.email }}</td>
-						<td style='text-align:center;'><a class="btn btn-primary" href="{% url 'propietario_editar' propietario.id %}">Editar</a><a class="btn btn-danger" href="{% url 'propietario_eliminar' propietario.id %}">Eliminar</a></td>
+						<td class='td-center'><a class="btn btn-primary" href="{% url 'propietario_editar' propietario.id %}">Editar</a><a class="btn btn-danger" href="{% url 'propietario_eliminar' propietario.id %}">Eliminar</a></td>
 					</tr>
 				{% endfor %}
 			{% else %}
