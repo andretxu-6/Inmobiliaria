@@ -1,11 +1,16 @@
 Python v2.7.10
 Django v1.11.1
 
+django superuser:
+  localhost:8000/admin
+  user:root
+  pass:andrea
+
+Para todos los campos menos superuser:
+  username: andrea
+  pass: andrea
+
 Recursos de css y js:
   Bootstrap con css de Bootswatch
   http://getbootstrap.com/
   https://bootswatch.com/flatly/
-
-Para todos los campos:
-  username: andrea
-  pass: andrea
