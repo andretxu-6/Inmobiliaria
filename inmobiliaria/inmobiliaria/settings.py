@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'apps.clientes',
     'apps.inmuebles',
     'apps.propietarios',
+    'apps.usuarios',
 )
 
 MIDDLEWARE_CLASSES = (
